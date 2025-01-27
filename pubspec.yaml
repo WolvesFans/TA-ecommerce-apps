@@ -1,0 +1,95 @@
+name: comro_alt
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.3 <4.0.0'
+
+
+#Packages
+dependencies:
+  flutter:
+    sdk: flutter
+
+  
+  
+  #Icons
+  cupertino_icons: ^1.0.2
+  iconsax: ^0.0.8
+
+  #State Management
+  get: ^4.6.6
+  get_storage: ^2.1.1
+
+  #Firebase
+  firebase_core: ^2.27.0
+  firebase_auth: ^4.20.0
+  cloud_firestore: ^4.17.5
+  google_sign_in: ^6.2.1
+  firebase_storage: ^11.7.7
+
+  #Utility Packages
+  http: ^1.2.0
+  intl: ^0.19.0
+  logger: ^2.2.0
+  url_launcher: ^6.2.6
+  smooth_page_indicator: ^1.1.0
+  carousel_slider: ^4.2.1
+  lorem_ipsum: ^0.0.3
+  flutter_native_splash: ^2.3.10
+  lottie: ^3.1.2
+  connectivity_plus: ^5.0.1
+  shimmer: ^3.0.0
+  image_picker: ^1.1.2
+  cached_network_image: ^3.4.0
+  sliver_tools: ^0.2.12
+  lints: ^4.0.0
+  in_app_purchase: ^3.2.0
+  icons_plus: ^5.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  #Local Assets
+  assets:
+    - assets/icons/
+    - assets/images/
+    - assets/logos/
+    - assets/fonts/
+  
+  #Local Fonts
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets\fonts\Poppins-Light.ttf
+        # weight: 300
+        - asset: assets\fonts\Poppins-Regular.ttf
+        # weight: 400
+        - asset: assets\fonts\Poppins-Italic.ttf
+        # weight: 400
+        # style: italic
+        - asset: assets\fonts\Poppins-Medium.ttf
+        # weight: 500
+        - asset: assets\fonts\Poppins-MediumItalic.ttf
+        # weight: 500
+        # style: italic
+        - asset: assets\fonts\Poppins-SemiBold.ttf
+        # weight: 600
+        - asset: assets\fonts\Poppins-SemiBoldItalic.ttf
+        # weight: 600
+        # style: italic
+        - asset: assets\fonts\Poppins-Bold.ttf
+        # weight: 800
+        - asset: assets\fonts\Poppins-BoldItalic.ttf
+        # weight: 800
+        # style: italic

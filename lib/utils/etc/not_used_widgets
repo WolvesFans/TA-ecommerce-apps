@@ -1,0 +1,76 @@
+// container dipake kalo misal mau ada logo kategori. tambahin gesturedetector juga buat bunggkus padding
+      // child: Column(
+      //   children: [
+      // circular icon
+      // Container(
+      //   width: 56,
+      //   height: 56,
+      //   padding: const EdgeInsets.all(CSizes.sm),
+      //   decoration: BoxDecoration(
+      //     color: backgroundColor ?? dark ? CColors.black : CColors.white),
+      //     borderRadius: BorderRadius.circular(50),
+      //   ),
+      //   image
+      //   child: const Center(
+      //       // child: Image(
+      //       //   image: AssetImage(image),
+      //       //   fit: BoxFit.cover,
+      //       //   color: dark ? CColors.light : CColors.dark,
+      //       // ),
+      //       ),
+      // ),
+
+      // text
+      // const SizedBox(height: CSizes.spaceBtwItems / 2),
+      // SizedBox(
+      //   width: 55,
+      //   child: Text(
+      //     title!,
+      //     style: Theme.of(context).textTheme.labelMedium!.apply(color: textColor),
+      //     maxLines: 1,
+      //     overflow: TextOverflow.ellipsis,
+      //   ),
+      // ),
+      // textbutton dipake kalo ga butuh foto
+
+
+      
+
+      Padding(
+        padding: const EdgeInsets.all(CSizes.defaultSpace),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              //search bar (if necessary)
+              const CSearchContainer(
+                text: CText.storeSearchBarTitle,
+                showBackground: true,
+                padding: EdgeInsets.zero,
+              ),
+              const SizedBox(height: CSizes.spaceBtwItems),
+
+              //category title
+              const CSectionHeading(
+                title: CText.categories,
+                showActionButton: false,
+              ),
+              const SizedBox(height: CSizes.spaceBtwItems),
+
+              //categories
+              const CHomeCategories(
+                text1: CText.alaCarte,
+                text2: CText.bundle,
+                text3: CText.beverages,
+              ),
+              const SizedBox(height: CSizes.spaceBtwSections),
+
+              //items
+              CVerticalLayout(
+                itemCount: 10,
+                itemBuilder: (_, context) => const CProductCardHorizontal(),
+              )
+            ],
+          ),
+        ),
+      ),

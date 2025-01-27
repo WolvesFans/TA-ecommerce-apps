@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "596599153604",
+    "project_id": "comroapps-704b9",
+    "storage_bucket": "comroapps-704b9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:596599153604:android:0a751e05098bbc80157a91",
+        "android_client_info": {
+          "package_name": "com.example.comro_alt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "596599153604-vfcjsuobhdva0a1k9aos3eqe4srh7v58.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.comro_alt",
+            "certificate_hash": "0e975812c5cc87a26777f4039ffc48b4771c5065"
+          }
+        },
+        {
+          "client_id": "596599153604-2aj2ni0qajgpmmhck5ii8aid8elp9qs3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDszWNtiH8YjRRntViDo5IH2x6SvI8Er6w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "596599153604-2aj2ni0qajgpmmhck5ii8aid8elp9qs3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "596599153604-bh7oiv5larcs5gpmnhof6i5pa3qt5kdg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.comroAlt"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
