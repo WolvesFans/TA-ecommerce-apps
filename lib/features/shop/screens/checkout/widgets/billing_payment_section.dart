@@ -30,10 +30,15 @@ class CBillingPaymentSection extends StatelessWidget {
                 applyImageRadius: true,
               ),
               const SizedBox(width: CSizes.spaceBtwItems),
-              Text(
-                controller.selectedPaymentMethod.value.name,
-                style: Theme.of(context).textTheme.titleLarge,
-              )
+              controller.selectedPaymentMethod.value.name == 'BCA Transfer (4380191950 a/n Zaki Permadi)'
+                  ? Text(
+                      controller.selectedPaymentMethod.value.name,
+                      style: Theme.of(context).textTheme.labelLarge,
+                    )
+                  : Text(
+                      controller.selectedPaymentMethod.value.name,
+                      style: Theme.of(context).textTheme.titleLarge,
+                    )
             ],
           ),
         )

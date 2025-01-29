@@ -90,7 +90,7 @@ class CheckoutScreen extends StatelessWidget {
 
                     //transfer receipt
                     Obx(() {
-                      return checkoutController.selectedPaymentMethod.value.name == 'BCA Transfer'
+                      return checkoutController.selectedPaymentMethod.value.name == 'BCA Transfer (4380191950 a/n Zaki Permadi)'
                           ? const CBillingTransferSection()
                           : const SizedBox(
                               height: CSizes.xs,

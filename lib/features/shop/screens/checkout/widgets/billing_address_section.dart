@@ -3,6 +3,7 @@ import 'package:comro_alt/features/personalization/controllers/address_controlle
 import 'package:comro_alt/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:iconsax/iconsax.dart';
 
 class CBillingAddressSection extends StatelessWidget {
   const CBillingAddressSection({super.key});
@@ -21,40 +22,46 @@ class CBillingAddressSection extends StatelessWidget {
           ),
           addressController.selectedAddress.value.id.isNotEmpty
               ? Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        addressController.selectedAddress.value.name,
-                        style: Theme.of(context).textTheme.bodyLarge,
-                      ),
-                      const SizedBox(height: CSizes.spaceBtwItems / 2),
-                      Row(
-                        children: [
-                          const Icon(Icons.phone, size: 16),
-                          const SizedBox(width: CSizes.spaceBtwItems),
-                          Text(
-                            addressController.selectedAddress.value.phoneNumber,
-                            style: Theme.of(context).textTheme.bodyLarge,
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: CSizes.spaceBtwItems / 2),
-                      Row(
-                        children: [
-                          const Icon(Icons.location_city, size: 16),
-                          const SizedBox(width: CSizes.spaceBtwItems),
-                          Text(
-                            addressController.selectedAddress.value.street,
-                            style: Theme.of(context).textTheme.bodyLarge,
-                          ),
-                        ],
-                      ),
-                    ],
-                  )
-              : Text(
-                  'Select address',
-                  style: Theme.of(context).textTheme.bodyMedium,
-                ),
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      addressController.selectedAddress.value.name,
+                      style: Theme.of(context).textTheme.bodyLarge,
+                    ),
+                    const SizedBox(height: CSizes.spaceBtwItems / 2),
+                    Row(
+                      children: [
+                        const Icon(Icons.phone, size: 16),
+                        const SizedBox(width: CSizes.spaceBtwItems),
+                        Text(
+                          addressController.selectedAddress.value.phoneNumber,
+                          style: Theme.of(context).textTheme.bodyLarge,
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: CSizes.spaceBtwItems / 2),
+                    Row(
+                      children: [
+                        const Icon(Icons.location_city, size: 16),
+                        const SizedBox(width: CSizes.spaceBtwItems),
+                        Text(
+                          addressController.selectedAddress.value.street,
+                          style: Theme.of(context).textTheme.bodyLarge,
+                        ),
+                      ],
+                    ),
+                  ],
+                )
+              : Row(
+                  children: [
+                    const Icon(Iconsax.safe_home, size: 16),
+                    const SizedBox(width: CSizes.spaceBtwItems / 2),
+                    Text(
+                      'Select address',
+                      style: Theme.of(context).textTheme.bodyMedium,
+                    ),
+                  ],
+                )
         ],
       ),
     );

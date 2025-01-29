@@ -46,7 +46,7 @@ class CheckoutController extends GetxController {
 
               //bca
               CPaymentTile(
-                paymentMethod: PaymentMethodModel(name: 'BCA Transfer', image: CImage.bcaIcon),
+                paymentMethod: PaymentMethodModel(name: 'BCA Transfer (4380191950 a/n Zaki Permadi)', image: CImage.bcaIcon),
               ),
 
               //cod
