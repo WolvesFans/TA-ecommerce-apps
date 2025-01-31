@@ -131,7 +131,6 @@ class CheckoutScreen extends StatelessWidget {
               );
             } else {
               altOrderController.processOrder(totalAmount);
-              // altOrderController.processOrder(totalAmount);
             }
           },
           child: Text(

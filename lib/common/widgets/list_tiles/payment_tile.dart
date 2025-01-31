@@ -12,15 +12,18 @@ class CPaymentTile extends StatelessWidget {
   const CPaymentTile({
     super.key,
     required this.paymentMethod,
+    required this.enabled,
   });
 
   final PaymentMethodModel paymentMethod;
+  final bool enabled;
 
   @override
   Widget build(BuildContext context) {
     final controller = CheckoutController.instance;
     return ListTile(
       contentPadding: const EdgeInsets.all(0),
+      enabled: enabled,
       onTap: () {
         controller.selectedPaymentMethod.value = paymentMethod;
         Get.back();

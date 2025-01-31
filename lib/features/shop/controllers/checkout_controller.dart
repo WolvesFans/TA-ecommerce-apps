@@ -13,7 +13,10 @@ class CheckoutController extends GetxController {
 
   @override
   void onInit() {
-    selectedPaymentMethod.value = PaymentMethodModel(name: 'GoPay', image: CImage.gopayIcon);
+    selectedPaymentMethod.value = PaymentMethodModel(
+      name: 'BCA Transfer (4380191950 a/n Zaki Permadi)',
+      image: CImage.bcaIcon,
+    );
     super.onInit();
   }
 
@@ -36,22 +39,26 @@ class CheckoutController extends GetxController {
               //gopay
               CPaymentTile(
                 paymentMethod: PaymentMethodModel(name: 'Gopay (Coming Soon)', image: CImage.gopayIcon),
+                enabled: false,
               ),
               const SizedBox(height: CSizes.spaceBtwItems / 2),
 
               //ovo
               CPaymentTile(
                 paymentMethod: PaymentMethodModel(name: 'OVO (Coming Soon)', image: CImage.ovoIcon),
+                enabled: false,
               ),
 
               //bca
               CPaymentTile(
                 paymentMethod: PaymentMethodModel(name: 'BCA Transfer (4380191950 a/n Zaki Permadi)', image: CImage.bcaIcon),
+                enabled: true,
               ),
 
               //cod
               CPaymentTile(
                 paymentMethod: PaymentMethodModel(name: 'Cash on Delivery', image: CImage.codIcon),
+                enabled: true,
               ),
             ],
           ),
