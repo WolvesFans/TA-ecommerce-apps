@@ -35,13 +35,13 @@ class CheckoutController extends GetxController {
 
               //gopay
               CPaymentTile(
-                paymentMethod: PaymentMethodModel(name: 'Gopay', image: CImage.gopayIcon),
+                paymentMethod: PaymentMethodModel(name: 'Gopay (Coming Soon)', image: CImage.gopayIcon),
               ),
               const SizedBox(height: CSizes.spaceBtwItems / 2),
 
               //ovo
               CPaymentTile(
-                paymentMethod: PaymentMethodModel(name: 'OVO', image: CImage.ovoIcon),
+                paymentMethod: PaymentMethodModel(name: 'OVO (Coming Soon)', image: CImage.ovoIcon),
               ),
 
               //bca
