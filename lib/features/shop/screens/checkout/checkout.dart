@@ -1,5 +1,6 @@
 import 'package:comro_alt/common/widgets/appbar/appbar.dart';
 import 'package:comro_alt/common/widgets/custom_shapes/container/rounded_container.dart';
+import 'package:comro_alt/common/widgets/texts/product_price_text.dart';
 import 'package:comro_alt/features/personalization/controllers/address_controller.dart';
 import 'package:comro_alt/features/shop/controllers/alt_order_controller.dart';
 import 'package:comro_alt/features/shop/controllers/cart_controller.dart';
@@ -84,6 +85,7 @@ class CheckoutScreen extends StatelessWidget {
 
                     //date
                     const CBillingDateSection(),
+                    const SizedBox(height: CSizes.spaceBtwItems),
 
                     //divider
                     const Divider(),
@@ -95,7 +97,7 @@ class CheckoutScreen extends StatelessWidget {
                           : const SizedBox(
                               height: CSizes.xs,
                             );
-                    })
+                    }),
                   ],
                 ),
               ),
@@ -133,8 +135,14 @@ class CheckoutScreen extends StatelessWidget {
               altOrderController.processOrder(totalAmount);
             }
           },
-          child: Text(
-            'Checkout Rp $totalAmount',
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text('Checkout '),
+              CProductPriceText(
+                price: subTotal,
+              ),
+            ],
           ),
         ),
       ),

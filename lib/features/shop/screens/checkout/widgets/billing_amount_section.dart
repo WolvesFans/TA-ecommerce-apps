@@ -1,3 +1,4 @@
+import 'package:comro_alt/common/widgets/texts/product_price_text.dart';
 import 'package:comro_alt/common/widgets/texts/section_heading.dart';
 import 'package:comro_alt/features/shop/controllers/cart_controller.dart';
 import 'package:comro_alt/utils/constants/sizes.dart';
@@ -25,10 +26,9 @@ class CBillingAmountSection extends StatelessWidget {
               'Subtotal',
               style: Theme.of(context).textTheme.titleLarge,
             ),
-            Text(
-              'Rp $subTotal',
-              style: Theme.of(context).textTheme.titleLarge,
-            )
+            CProductPriceText(
+              price: subTotal,
+            ),
           ],
         ),
         const SizedBox(height: CSizes.spaceBtwItems / 2),
@@ -39,12 +39,11 @@ class CBillingAmountSection extends StatelessWidget {
           children: [
             Text(
               'Shipping fee',
-              style: Theme.of(context).textTheme.titleSmall,
+              style: Theme.of(context).textTheme.titleLarge,
             ),
-            Text(
-              'Rp ${CPricingCalculator.getShippingCost('BDG')}',
-              style: Theme.of(context).textTheme.titleSmall,
-            )
+            CProductPriceText(
+              price: CPricingCalculator.getShippingCost('BDG'),
+            ),
           ],
         ),
         const SizedBox(height: CSizes.spaceBtwItems),
@@ -57,10 +56,9 @@ class CBillingAmountSection extends StatelessWidget {
               'Order total',
               style: Theme.of(context).textTheme.titleLarge,
             ),
-            Text(
-              'Rp ${CPricingCalculator.calculateTotalPrice(subTotal, 'BDG')}',
-              style: Theme.of(context).textTheme.titleLarge,
-            )
+            CProductPriceText(
+              price: CPricingCalculator.calculateTotalPrice(subTotal, 'BDG'),
+            ),
           ],
         ),
         const SizedBox(height: CSizes.spaceBtwItems / 2),

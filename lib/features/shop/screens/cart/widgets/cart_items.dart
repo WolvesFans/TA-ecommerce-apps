@@ -51,8 +51,7 @@ class CCartItems extends StatelessWidget {
                       ],
                     ),
                     CProductPriceText(
-                      currencySign: '',
-                      price: (item.price * item.quantity).toStringAsFixed(1),
+                      price: (item.price * item.quantity),
                     ),
                   ],
                 ),

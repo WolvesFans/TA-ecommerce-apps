@@ -76,8 +76,7 @@ class CProductCardHorizontal extends StatelessWidget {
                         children: [
                           //price
                           CProductPriceText(
-                            currencySign: 'Rp ',
-                            price: product.price.toString(),
+                            price: product.price,
                           ),
 
                           //add to cart

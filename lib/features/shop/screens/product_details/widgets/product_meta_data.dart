@@ -36,8 +36,7 @@ class CProductMetaData extends StatelessWidget {
             //price
             CProductPriceText(
               isLarge: true,
-              currencySign: 'Rp ',
-              price: product.price.toString(),
+              price: product.price,
             ),
           ],
         ),

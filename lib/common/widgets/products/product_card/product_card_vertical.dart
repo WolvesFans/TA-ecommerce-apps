@@ -22,7 +22,6 @@ class CProductCardVertical extends StatelessWidget {
 
     //container side
     return GestureDetector(
-      // onTap: () => Get.to(() => ProductDetail()),
       child: Container(
         width: 170,
         padding: const EdgeInsets.all(1),
@@ -71,7 +70,6 @@ class CProductCardVertical extends StatelessWidget {
                     children: [
                       //price
                       const CProductPriceText(
-                        currencySign: 'Rp ',
                         price: CText.defaultPrice,
                         maxLines: 1,
                       ),
